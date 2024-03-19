@@ -22,6 +22,7 @@ export default function Frame({
             y={gap}
             width={innerWidth}
             height={innerHeight}
+            rx="15"
             fill="black"
           />
         </mask>
@@ -33,7 +34,7 @@ export default function Frame({
         y="0"
         width={width}
         height={height}
-        fill="white"
+        className="fill-slate-100"
         fillOpacity={fillOpacity}
         mask="url(#frame)"
       />

@@ -29,10 +29,10 @@ export default function Index() {
   };
 
   return (
-    <div className="flex justify-center items-center bg-slate-100 h-dvh">
-      <div className="flex flex-col justify-center items-center max-w-xl bg-white p-10 gap-10">
+    <div className="flex justify-center items-center bg-slate-200 h-dvh">
+      <div className="flex flex-col justify-center items-center max-w-xl bg-slate-100 p-10 gap-10">
         <div className="relative">
-          <img src={cards[selectedCardIndex]} />
+          <img alt="" src={cards[selectedCardIndex]} />
           <div className="absolute top-0 left-0 w-full">
             <Frame width={width} height={height} cut={cut} />
           </div>
