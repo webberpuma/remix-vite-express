@@ -7,7 +7,7 @@ export default function Frame({
   height: number;
   cut: boolean;
 }) {
-  const gap = 40;
+  const gap = 35;
   const innerWidth = width - gap * 2;
   const innerHeight = height - gap * 2;
   const fillOpacity = cut ? 1 : 0;
@@ -22,7 +22,7 @@ export default function Frame({
             y={gap}
             width={innerWidth}
             height={innerHeight}
-            rx="15"
+            rx="35"
             fill="black"
           />
         </mask>
