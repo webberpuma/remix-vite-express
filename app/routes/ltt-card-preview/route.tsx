@@ -7,8 +7,7 @@ import { useState } from "react";
 export default function Index() {
   const width = 820;
   const height = 1120;
-  const [cut, setCut] = useState(false);
-  // const [reset, setReset] = useState(true);
+  const [cut, setCut] = useState(true);
   const cards = [card1, card2, card3];
   const [selectedCardIndex, setSelectedCardIndex] = useState(0);
 
@@ -44,7 +43,6 @@ export default function Index() {
               ? "Click to see original image"
               : "Click to see print image after cut"}
           </button>
-          {/* <button  onClick={() => setReset(true)}>Reset</button> */}
           <button onClick={() => selectNextCard()}>Next</button>
         </div>
       </div>
