@@ -1,10 +1,7 @@
-import pkg from "svg-round-corners";
-const { roundCorners } = pkg;
 import { roundedPolygonByCircumRadius } from "curved-polygon";
 
 export default function Index() {
   const path = "m216.1042,78.4l0,49.49112l49.21308,0l0,-49.49112l-49.21308,0z";
-  const roundedPath = roundCorners(path, 10, 2);
 
   const pathStringC = roundedPolygonByCircumRadius({
     circumRadius: 200,
@@ -21,11 +18,6 @@ export default function Index() {
         <div className="bg-slate-200">
           <svg width="300" height="300">
             <path d={path} />
-          </svg>
-        </div>
-        <div className="bg-slate-200">
-          <svg width="300" height="300">
-            <path d={roundedPath.path} />
           </svg>
         </div>
       </div>

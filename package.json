@@ -24,8 +24,7 @@
     "isbot": "^4.1.0",
     "morgan": "^1.10.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "svg-round-corners": "^0.4.3"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.8.1",
