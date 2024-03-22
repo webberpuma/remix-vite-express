@@ -3,7 +3,7 @@ import card1 from "./card1.png";
 import card2 from "./card2.png";
 import card3 from "./card3.png";
 import { useState } from "react";
-import Toolbar from "../ltt-preview/Toolbar";
+import Preview from "../ltt-preview/Preview";
 
 export default function Index() {
   const width = 820;
@@ -29,19 +29,18 @@ export default function Index() {
   };
 
   return (
-    <>
+    <Preview
+      selectNextItem={selectNextCard}
+      selectPreviousItem={selectPreviousCard}
+      setCut={setCut}
+      cut={cut}
+    >
       <div className="relative">
         <img alt="" src={cards[selectedCardIndex]} />
         <div className="absolute top-0 left-0 w-full">
           <Frame width={width} height={height} cut={cut} />
         </div>
       </div>
-      <Toolbar
-        selectNextItem={selectNextCard}
-        selectPreviousItem={selectPreviousCard}
-        setCut={setCut}
-        cut={cut}
-      />
-    </>
+    </Preview>
   );
 }

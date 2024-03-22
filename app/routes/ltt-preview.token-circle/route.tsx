@@ -3,7 +3,7 @@ import token1 from "./token1.png";
 import token2 from "./token2.png";
 import token3 from "./token3.png";
 import { useState } from "react";
-import Toolbar from "../ltt-preview/Toolbar";
+import Preview from "../ltt-preview/Preview";
 
 export default function Index() {
   const width = 247;
@@ -29,19 +29,18 @@ export default function Index() {
   };
 
   return (
-    <>
+    <Preview
+      selectNextItem={selectNextToken}
+      selectPreviousItem={selectPreviousToken}
+      setCut={setCut}
+      cut={cut}
+    >
       <div className="relative">
         <img alt="" src={tokens[selectedTokenIndex]} />
         <div className="absolute top-0 left-0 w-full">
           <Frame width={width} height={height} cut={cut} />
         </div>
       </div>
-      <Toolbar
-        selectNextItem={selectNextToken}
-        selectPreviousItem={selectPreviousToken}
-        setCut={setCut}
-        cut={cut}
-      />
-    </>
+    </Preview>
   );
 }
